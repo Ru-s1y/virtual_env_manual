@@ -57,7 +57,7 @@ $ ls
 Vagrantfile
 ```
 中身を変更します。
-```vagrantfile:Vagrantfile
+```
 # ① 26行目 コメントイン
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
@@ -275,8 +275,9 @@ $ sudo systemctl start php-fpm
 ```
 $ sudo vi /etc/yum.repos.d/nginx.repo
 ```
+これはNginxのリポジトリ情報を記載するファイルです。
 内容は以下の内容を記述してください。
-```repo=
+```
 [nginx]
 name=nginx repo
 baseurl=https://nginx.org/packages/mainline/centos/\$releasever/\$basearch/
@@ -292,6 +293,10 @@ $ nginx -v
 ```
 $ sudo systemctl start nginx
 ```
+もしくは以下のように実行することで自動起動設定ができます。
+```
+$ sudo systemctl enable nginx
+```
 ブラウザで[http://192.168.33.19](http://192.168.33.19)を開き、NginxのWelcomeページが表示されることを確認する。
 ***
 
@@ -300,7 +305,7 @@ viエディタでnginxの設定ファイルを編集します。
 ```
 $ sudo vi /etc/nginx/conf.d/default.conf
 ```
-```conf=
+```nginx
 server {
   listen       80;
   server_name  192.168.33.19; # 指定のIPアドレス
@@ -336,7 +341,7 @@ server {
 ```
 $ sudo vi /etc/php-fpm.d/www.conf
 ```
-```conf=
+```
 ;24行目近辺
 user = apache
 # ↓ 以下に編集
@@ -374,7 +379,7 @@ SELinuxによって制限されていることがあります。
 $ sudo vi /etc/selinux/config
 ```
 以下のように編集してください。
-```=
+```
 # This file controls the state of SELinux on the system.
 # SELINUX= can take one of these three values:
 # enforcing - SELinux security policy is enforced.
@@ -421,7 +426,7 @@ $ sudo systemctl start mysqld
 ```
 $ sudo vi /etc/my.cnf
 ```
-```=
+```
 # 省略
 
 [mysqld]
@@ -465,7 +470,7 @@ Query OK と表示されればOKです。
 
 #### Laravelの環境ファイル編集
 sample_appディレクトリに移動して`.env`ファイルを以下のように編集します。
-```=
+```
 # 変更
 DB_DATABASE=laravel
 	↓
@@ -545,3 +550,4 @@ $ vagrant halt
 ### その他の参考サイト
 - [GizTech](https://giztech.gizumo-inc.work/)
 - [【まとめ】Vagrant コマンド一覧](https://qiita.com/oreo3@github/items/4054a4120ccc249676d9)
+- [[GitHub] Markdownの「シンタックスハイライト」に対応している言語一覧](https://blog.katsubemakito.net/articles/github-markdown-syntaxhighlighting)
