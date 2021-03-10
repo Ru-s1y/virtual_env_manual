@@ -336,6 +336,10 @@ server {
 
   # 省略
 ```
+- **root** ドキュメントルートのディレクトリ設定をします。
+- **index** リクエストのURLが"/"で終わっているときにindexとして使われるファイル名を設定します。
+
+>例えば http://192.168.33.19/ にアクセスすると /vagrant/sample_app/public内 にある index.php に内部リダイレクトします。
 
 次に **php-fpm** の設定ファイルを編集します。
 ```
@@ -401,6 +405,7 @@ $ vagrant ssh
 $ sudo systemctl start nginx
 $ sudo systemctl start php-fpm
 ```
+**Tips** `systemctl start`を`systemctl enable`にすると仮想OS起動時の自動起動設定ができます。
 ***
 
 ### 4. MySQL(データベース)のセットアップ
@@ -519,6 +524,8 @@ $ sudo systemctl start nginx
 $ sudo systemctl start php-fpm
 $ sudo systemctl start mysqld
 ```
+**Tips** `start`を`enable`にすることで仮想OS起動時の自動起動設定ができます。
+***
 **その他使いそうな仮想マシン操作コマンド**
 - 仮想マシンの一時停止
 ```
