@@ -10,19 +10,7 @@ Vagrantを使用したLaravel環境を構築するための手順書です。
 6. PHPのバージョンは**7.3**
 7. Laravelのバージョンは**6.0**
 
-スタートは **vagrant用ディレクトリの作成**
-ゴールは **インストールしたLaravelプロジェクトにログイン機能を実装して実際にログインすること**です。
-
-- バージョン一覧
-PHP・Nginx・MySQL・Laravel・OSのバージョンを明記した テーブルマークダウン を作成してください。
-- どういう流れで環境構築したか
-**他の人が手順書を見て全く同じ環境を構築できる** また、**全体の流れが把握できる** ことを意識して記述してください。
-- 環境構築の所感
-**環境構築中に気付いたことや学んだこと** を記述してください。
-- 参考サイト
-参考にしたサイトの名前とURLを記載
-***
-
+### バージョン情報
 |環境|使用技術|バージョン|
 |:--:|:--:|:--:|
 |AppServer|PHP|7.3|
@@ -31,7 +19,7 @@ PHP・Nginx・MySQL・Laravel・OSのバージョンを明記した テーブル
 |FrameWork|Laravel|6.0|
 |OS|CentOS|7系|
 
-他使用技術
+**その他使用技術**
 - VirtualBox
 
 ## 作業準備
@@ -42,7 +30,7 @@ PHP・Nginx・MySQL・Laravel・OSのバージョンを明記した テーブル
 $ mkdir vagrant_dir && cd vagrant_dir
 ```
 
-ContOSのboxを使用するために以下のコマンドを実行します。(仮想マシンの初期化)
+CentOSのboxを使用するために以下のコマンドを実行します。(仮想マシンの初期化)
 ```
 $ vagrant init centos/7
 ```
@@ -161,8 +149,8 @@ umount: /mnt: not mounted
 
 ~~vbguest使ってみたけどダメでした。~~
 
-`No package kernel-devel-3.10.0-1127.el7.x86_64 available.`
-ここで止まっているので以下の記事を参考にした。
+`No package kernel-devel-3.10.0-1127.el7.x86_64 available.` 
+ここで止まっているので以下の記事を参考にした。 
 [# Vagrant + VirtualBOx で 最新のCentOS7 vbox(centos/7 2004.01)でマウントできない問題](https://qiita.com/mao172/items/f1af5bedd0e9536169ae)
 
 下記のコマンドを実行してみます。
@@ -180,7 +168,7 @@ $ vagrant reload --provision
 ```
 $ vagrant ssh
 ```
-==ホストOSとゲストOSどっちでコマンドを実行するのか間違えないように!!==
+ホストOSとゲストOSどっちでコマンドを実行するのか間違えないように!! 
 
 SSHの設定確認をします。
 ※ ゲストOSでログインしている場合は`$ exit`で一旦ログアウトしてくだい。
@@ -191,7 +179,7 @@ $ vagrant ssh-config
 ***
 
 ## 仮想環境構築
-==**以下ゲストOS上での操作になります。**==
+**以下ゲストOS上での操作になります。** 
 ```
 $ vagrant ssh
 ```
@@ -360,7 +348,8 @@ $ sudo systemctl restart nginx
 $ sudo systemctl restart php-fpm
 ```
 ***
-==**"Forbidden 403" が出た時**==
+
+**"Forbidden 403" が出た時** 
 SELinuxによって制限されていることがあります。
 >SELinux (Security-Enhanced Linux) とは、システムにアクセス可能なユーザーをより詳細に制御できるようにする、Linux® システム 用のセキュリティ・アーキテクチャです。
 >引用サイト: [SELinux とは](https://www.redhat.com/ja/topics/linux/what-is-selinux)
@@ -476,6 +465,7 @@ DB_PASSWORD=新しく登録したパスワード
 - [vagrant環境化のLaravelでインストール直後にThe stream or file “/vagrant/xxxxx/storage/logs/laravel.log” could not be opened: failed to open stream: Permission denied](https://hiroslog.com/post/96)
 - [【vagrant】共有フォルダのパーミッションで悩んだ話【chmodできない】](http://ism1000ch.hatenablog.com/entry/2014/04/05/232935)
 ***
+
 #### migrate実行
 以下のコマンドを実行してデータベースにテーブルを作成します。
 ```
@@ -524,6 +514,6 @@ $ vagrant halt
 エラー文コピペでも十分に効果があります。
 ***
 
-##　その他参考URL
+## その他参考URL
 - [GizTech](https://giztech.gizumo-inc.work/)
 - [【まとめ】Vagrant コマンド一覧](https://qiita.com/oreo3@github/items/4054a4120ccc249676d9)
