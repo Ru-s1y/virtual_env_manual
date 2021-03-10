@@ -20,7 +20,10 @@ Vagrantを使用したLaravel環境を構築するための手順書です。
 |OS|CentOS|7.9.2009|
 
 **その他使用技術**
-- VirtualBox
+|環境|バージョン|
+|:--:|:--:|
+|Vagrant|2.2.14|
+|VirtualBox|6.0.14|
 
 ## 作業準備
 
