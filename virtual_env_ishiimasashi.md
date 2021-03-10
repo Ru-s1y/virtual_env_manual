@@ -93,7 +93,9 @@ config.vm.synced_folder "./", "/vagrant", type:"virtualbox
 ---
 #### Vagrantプラグインのインストール
 **vagrant-vbguest**
+
 vagrant-vbguestは初めに追加したBoxの中にインストールされているGuest Additionsというもののバージョンを、VirtualBoxのバージョンに合わせて最新化してくれるプラグインです。 
+
 以下のコマンドを実行してインストールします。
 ```
 $ vagrant plugin install vagrant-vbguest
@@ -106,7 +108,9 @@ vagrant-vbguest (0.29.0, global)
 ```
 
 **Sahara**
+
 仮想環境のバージョン管理ができるプラグインです。
+
 必要に応じて入れてください。
 ```
 $ vagrant plugin install sahara
@@ -136,7 +140,7 @@ $ vagrant up
 ```
 ※ 立ち上がるまで時間がかかります。
 
-#### =='vagrant up'でエラーが出た！！==
+#### 'vagrant up'でエラーが出た！！
 エラー分の切り抜きは以下の通りです。
 ```
 (省略)
@@ -150,7 +154,9 @@ umount: /mnt: not mounted
 ~~vbguest使ってみたけどダメでした。~~
 
 `No package kernel-devel-3.10.0-1127.el7.x86_64 available.` 
+
 ここで止まっているので以下の記事を参考にした。 
+
 [# Vagrant + VirtualBOx で 最新のCentOS7 vbox(centos/7 2004.01)でマウントできない問題](https://qiita.com/mao172/items/f1af5bedd0e9536169ae)
 
 下記のコマンドを実行してみます。
