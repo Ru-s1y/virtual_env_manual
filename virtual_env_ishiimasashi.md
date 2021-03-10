@@ -69,7 +69,8 @@ Vagrantfile
   ↓
   config.vm.synced_folder "./", "/vagrant", type:"virtualbox"
 ```
---- 
+***
+
 **以下解説(コメントアウトのGoogle翻訳)**
 - **① ポートの割り当て**
 ```
@@ -356,6 +357,10 @@ $ sudo chmod -R 777 storage
 $ sudo systemctl restart nginx
 $ sudo systemctl restart php-fpm
 ```
+
+**参考URL**
+- [vagrant環境化のLaravelでインストール直後にThe stream or file “/vagrant/xxxxx/storage/logs/laravel.log” could not be opened: failed to open stream: Permission denied](https://hiroslog.com/post/96)
+- [【vagrant】共有フォルダのパーミッションで悩んだ話【chmodできない】](http://ism1000ch.hatenablog.com/entry/2014/04/05/232935)
 ***
 
 **"Forbidden 403" が出た時** 
@@ -411,7 +416,7 @@ $ mysql --version
 ```
 $ sudo systemctl start mysqld
 ```
-
+***
 **DBパスワードを緩くする場合(開発用)**
 ```
 $ sudo vi /etc/my.cnf
@@ -434,7 +439,8 @@ validate-password=OFF
 $ sudo systemctl restart mysqld
 ```
 
-注意: ステージング環境や本番環境で使用するDBにはポリシーを遵守したパスワードを設定してください。
+>注意!! ステージング環境や本番環境で使用するDBにはポリシーを遵守したパスワードを設定してください。
+***
 
 
 MySQLの初期パスワードの確認をします。(***のところ)
@@ -471,9 +477,6 @@ DB_PASSWORD=
 DB_PASSWORD=新しく登録したパスワード
 ```
 
-**参考URL**
-- [vagrant環境化のLaravelでインストール直後にThe stream or file “/vagrant/xxxxx/storage/logs/laravel.log” could not be opened: failed to open stream: Permission denied](https://hiroslog.com/post/96)
-- [【vagrant】共有フォルダのパーミッションで悩んだ話【chmodできない】](http://ism1000ch.hatenablog.com/entry/2014/04/05/232935)
 ***
 
 #### migrate実行
