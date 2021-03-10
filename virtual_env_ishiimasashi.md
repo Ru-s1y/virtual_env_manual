@@ -350,6 +350,7 @@ $ sudo systemctl restart php-fpm
 ***
 
 **"Forbidden 403" が出た時** 
+
 SELinuxによって制限されていることがあります。
 >SELinux (Security-Enhanced Linux) とは、システムにアクセス可能なユーザーをより詳細に制御できるようにする、Linux® システム 用のセキュリティ・アーキテクチャです。
 >引用サイト: [SELinux とは](https://www.redhat.com/ja/topics/linux/what-is-selinux)
