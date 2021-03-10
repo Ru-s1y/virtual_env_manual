@@ -92,8 +92,6 @@ config.vm.synced_folder "./", "/vagrant", type:"virtualbox
 ```
 >追加のフォルダーをゲストVMと共有します。最初の引数は、ホスト上の実際のフォルダーへのパスです。 2番目の引数は、フォルダーをマウントするゲストのパスです。また、オプションの3番目の引数は、不要なオプションのセットです。
 
-参考URL: [Vagrantで開発環境を用意したときにVagrantfileに入れた設定メモ](https://qiita.com/watyanabe164/items/cdb3949a1a4f6c56bb31)
-
 ---
 #### Vagrantプラグインのインストール
 **vagrant-vbguest**
@@ -262,11 +260,6 @@ $ sudo systemctl start php-fpm
 ```
 [http://192.168.33.19:8000](http://192.168.33.19:8000)にアクセスしてLaravelのホームが表示されたらOKです。
 
-**参考URL**
-- [更新！！Laravel6/7 (laravel/ui)でのLogin機能の実装方法〜MyMemo](https://qiita.com/daisu_yamazaki/items/a914a16ca1640334d7a5)
-- [laravel.com](https://laravel.com/docs/6.x/frontend#introduction)
-- [Vagrant + VirtualBox + Centos7でLaravel6環境構築とインストール・起動まで](https://webrogram.com/entries/vagrant-centos7-environment)
-
 ***
 
 ### 3. Nginx(Webサーバー)のセットアップ
@@ -367,9 +360,6 @@ $ sudo systemctl restart nginx
 $ sudo systemctl restart php-fpm
 ```
 
-**参考URL**
-- [vagrant環境化のLaravelでインストール直後にThe stream or file “/vagrant/xxxxx/storage/logs/laravel.log” could not be opened: failed to open stream: Permission denied](https://hiroslog.com/post/96)
-- [【vagrant】共有フォルダのパーミッションで悩んだ話【chmodできない】](http://ism1000ch.hatenablog.com/entry/2014/04/05/232935)
 ***
 
 **"Forbidden 403" が出た時** 
@@ -558,3 +548,12 @@ $ vagrant halt
 - [GizTech](https://giztech.gizumo-inc.work/)
 - [【まとめ】Vagrant コマンド一覧](https://qiita.com/oreo3@github/items/4054a4120ccc249676d9)
 - [[GitHub] Markdownの「シンタックスハイライト」に対応している言語一覧](https://blog.katsubemakito.net/articles/github-markdown-syntaxhighlighting)
+- [Vagrantで開発環境を用意したときにVagrantfileに入れた設定メモ](https://qiita.com/watyanabe164/items/cdb3949a1a4f6c56bb31)
+- [VagrantにSaharaを導入](https://qiita.com/sudachi808/items/09cbd3dd1f5c25c23eaf)
+- [# Vagrant + VirtualBOx で 最新のCentOS7 vbox(centos/7 2004.01)でマウントできない問題](https://qiita.com/mao172/items/f1af5bedd0e9536169ae)
+- [更新！！Laravel6/7 (laravel/ui)でのLogin機能の実装方法〜MyMemo](https://qiita.com/daisu_yamazaki/items/a914a16ca1640334d7a5)
+- [laravel.com](https://laravel.com/docs/6.x/frontend#introduction)
+- [Vagrant + VirtualBox + Centos7でLaravel6環境構築とインストール・起動まで](https://webrogram.com/entries/vagrant-centos7-environment)
+- [vagrant環境化のLaravelでインストール直後にThe stream or file “/vagrant/xxxxx/storage/logs/laravel.log” could not be opened: failed to open stream: Permission denied](https://hiroslog.com/post/96)
+- [【vagrant】共有フォルダのパーミッションで悩んだ話【chmodできない】](http://ism1000ch.hatenablog.com/entry/2014/04/05/232935)
+- [SELinux とは](https://www.redhat.com/ja/topics/linux/what-is-selinux)
