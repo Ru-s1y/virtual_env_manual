@@ -481,6 +481,12 @@ $ php artisan migrate
 ```
 ***
 
+### 最後に
+実際にアクセスしてみましょう。
+
+[http://192.168.33.19](http://192.168.33.19)
+***
+
 ### うまくいかない時は
 うまく動作しない時は一度立ち上げ直すのも一つの手です。
 設定を変えたものの再起動によって初めて反映される場合があるためです。
@@ -521,6 +527,15 @@ $ vagrant halt
 エラー文コピペでも十分に効果があります。
 ***
 
-## その他参考URL
+## その他
+### 所感等
+- 一通りの環境構築ができるようになった。
+- Nginxの設定周りは今後引っかかりそうな予感がした。
+- 権限のところ（nginxがlogファイルを読みに行けない）でつまづいたがなんとかなった。
+- VSCodeのマークダウンプレビューとGitHubにプッシュしてからの表示が地味に違っているところが面倒だった。
+- VagrantとDockerの使い分けについて理解を深める。
+[Vagrant & Dockerによるイマドキの開発環境構築](https://www.slideshare.net/nakazawayuichi/vagrant-docker-72396427)
+
+### その他の参考サイト
 - [GizTech](https://giztech.gizumo-inc.work/)
 - [【まとめ】Vagrant コマンド一覧](https://qiita.com/oreo3@github/items/4054a4120ccc249676d9)
