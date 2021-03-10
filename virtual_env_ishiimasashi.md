@@ -14,10 +14,10 @@ Vagrantを使用したLaravel環境を構築するための手順書です。
 |環境|使用技術|バージョン|
 |:--:|:--:|:--:|
 |AppServer|PHP|7.3|
-|WebServer|Nginx||
+|WebServer|Nginx|1.19.7|
 |DataBase|MySQL|5.7|
 |FrameWork|Laravel|6.0|
-|OS|CentOS|7系|
+|OS|CentOS|7.9.2009|
 
 **その他使用技術**
 - VirtualBox
